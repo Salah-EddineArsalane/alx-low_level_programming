@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point of the program
@@ -7,14 +9,14 @@
  */
 int main(void)
 {
-    char letter = 'a';
+char letter = 'a';
 
-    while (letter <= 'z')
-    {
-        putchar(letter);
-        letter++;
-    }
+while (letter <= 'z')
+{
+putchar(letter);
+letter++;
+}
 
-    putchar('\n'); // Print newline after printing the alphabet
-    return (0);
+putchar('\n');
+return (0);
 }

@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
  * main - Entry point of the program
@@ -7,14 +9,14 @@
  */
 int main(void)
 {
-    int digit = 0;
+int digit = 0;
 
-    while (digit < 10)
-    {
-        putchar(digit + '0');  // Convert digit to character and print
-        digit++;               // Move to the next digit
-    }
+while (digit < 10)
+{
+putchar(digit + '0');  // Convert digit to character and print
+digit++;               // Move to the next digit
+}
 
-    putchar('\n'); // Print newline after printing all digits
-    return (0);
+putchar('\n'); // Print newline after printing all digits
+return (0);
 }
