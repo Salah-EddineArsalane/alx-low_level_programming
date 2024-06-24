@@ -24,6 +24,6 @@ putchar(uppercase);
 uppercase++;
 }
 
-putchar('\n'); // Print newline after printing both lowercase and uppercase alphabets
+putchar('\n');
 return (0);
 }

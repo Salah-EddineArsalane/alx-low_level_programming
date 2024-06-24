@@ -20,6 +20,6 @@ putchar(',');
 putchar(' ');
 }
 }
-putchar('\n'); // Print newline after printing all combinations
+putchar('\n');
 return (0);
 }

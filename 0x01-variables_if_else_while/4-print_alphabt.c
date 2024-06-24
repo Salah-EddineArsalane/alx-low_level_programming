@@ -20,6 +20,6 @@ putchar(letter);
 letter++;
 }
 
-putchar('\n'); // Print newline after printing the alphabet
+putchar('\n');
 return (0);
 }
