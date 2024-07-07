@@ -19,26 +19,19 @@ return (len);
 }
 
 /**
- * puts_half - Prints the second half of a string.
- * @str: Pointer to the string.
+ * rev_string - Reverses a string.
+ * @s: Pointer to the string to be reversed.
  */
-void puts_half(char *str)
+void rev_string(char *s)
 {
-int len = _strlen(str);
-int i, start;
+int len = _strlen(s);
+int i;
+char temp;
 
-if (len % 2 == 0)
+for (i = 0; i < len / 2; i++)
 {
-start = len / 2;
+temp = s[i];
+s[i] = s[len - 1 - i];
+s[len - 1 - i] = temp;
 }
-else
-{
-start = (len - 1) / 2;
-}
-
-for (i = start; i < len; i++)
-{
-_putchar(str[i]);
-}
-_putchar('\n');
 }
