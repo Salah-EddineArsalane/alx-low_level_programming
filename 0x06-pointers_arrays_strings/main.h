@@ -7,6 +7,7 @@ char *cap_string(char *str);
 char *leet(char *str);
 char *rot13(char *str);
 void reverse_array(int *a, int n);
+void print_number(int n);
 int _strcmp(char *s1, char *s2);
 int _putchar(char c);
 
