@@ -7,30 +7,45 @@
 int main(void)
 {
 char password[PASSWORD_LENGTH + 1];
-int i, random_num, sum;
+int i, random_num, has_uppercase, has_digit;
 
 srand(time(0));
 
-sum = 0;
+do
+{
 i = 0;
-while (sum < PASSWORD_LENGTH - 1)
+has_uppercase = 0;
+has_digit = 0;
+
+while (i < PASSWORD_LENGTH - 2)
 {
 random_num = rand() % 62;
 
 if (random_num < 26)
+{
 password[i++] = 'a' + random_num;
+}
 else if (random_num < 52)
+{
 password[i++] = 'A' + random_num - 26;
+has_uppercase = 1;
+}
 else
+{
 password[i++] = '0' + random_num - 52;
-
-sum += 1;
+has_digit = 1;
+}
 }
 
-password[i++] = rand() % 10 + '0';
 password[i++] = rand() % 26 + 'A';
+has_uppercase = 1;
+
+password[i++] = rand() % 10 + '0';
+has_digit = 1;
 
 password[PASSWORD_LENGTH] = '\0';
+}
+while (!has_uppercase || !has_digit);
 
 printf("%s\n", password);
 
