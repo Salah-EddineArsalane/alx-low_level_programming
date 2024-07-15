@@ -9,12 +9,12 @@
  */
 int word_len(char *str)
 {
-    int len = 0;
+int len = 0;
 
-    while (*(str + len) != ' ' && *(str + len) != '\0')
-        len++;
+while (*(str + len) != ' ' && *(str + len) != '\0')
+len++;
 
-    return (len);
+return (len);
 }
 
 /**
@@ -25,18 +25,18 @@ int word_len(char *str)
  */
 int count_words(char *str)
 {
-    int i = 0, words = 0, len = 0;
+int i = 0, words = 0, len = 0;
 
-    while (*(str + len))
-        len++;
+while (*(str + len))
+len++;
 
-    for (i = 0; i < len; i++)
-    {
-        if (*(str + i) != ' ' && (i == 0 || *(str + i - 1) == ' '))
-            words++;
-    }
+for (i = 0; i < len; i++)
+{
+if (*(str + i) != ' ' && (i == 0 || *(str + i - 1) == ' '))
+words++;
+}
 
-    return (words);
+return (words);
 }
 
 /**
