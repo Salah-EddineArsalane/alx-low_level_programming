@@ -35,14 +35,14 @@ return (1);
 }
 
 /**
- * convert_to_int - Converts a string of digits to unsigned long long integer.
+ * convert_to_int - Converts a string of digits to an unsigned int.
  * @str: The string to be converted.
  *
- * Return: The converted unsigned long long integer.
+ * Return: The converted unsigned int.
  */
-unsigned long long convert_to_int(char *str)
+unsigned int convert_to_int(char *str)
 {
-unsigned long long num = 0;
+unsigned int num = 0;
 
 while (*str)
 {
@@ -59,11 +59,11 @@ return (num);
  */
 void multiply(char *num1, char *num2)
 {
-unsigned long long n1 = convert_to_int(num1);
-unsigned long long n2 = convert_to_int(num2);
-unsigned long long result = n1 * n2;
-char buffer[21];
-int i = 20;
+unsigned int n1 = convert_to_int(num1);
+unsigned int n2 = convert_to_int(num2);
+unsigned int result = n1 * n2;
+char buffer[12];
+int i = 11;
 
 buffer[i--] = '\0';
 if (result == 0)
