@@ -19,6 +19,11 @@ char *owner;
 };
 
 /**
+ * dog_t - new name for struct dog
+ */
+typedef struct dog dog_t;
+
+/**
  * init_dog - initializes a variable of type struct dog
  * @d: pointer to struct dog to initialize
  * @name: name to initialize
@@ -32,5 +37,15 @@ void init_dog(struct dog *d, char *name, float age, char *owner);
  * @d: pointer to struct dog to print
  */
 void print_dog(struct dog *d);
+
+/**
+ * new_dog - creates a new dog
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: pointer to the new dog, or NULL if it fails
+ */
+dog_t *new_dog(char *name, float age, char *owner);
 
 #endif
